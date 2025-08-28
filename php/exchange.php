@@ -294,15 +294,41 @@ if (isset($_GET['upd']))      $toast='อัปเดตสถานะสำเ
 :root{--brand:#ffcc00;--ink:#333;--muted:#666;--bg:#f7f7f7;--shadow:0 6px 18px rgba(0,0,0,.08)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);font-family:'Segoe UI',Tahoma,sans-serif;color:var(--ink)}
-header{background:var(--brand);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 6px rgba(0,0,0,.06)}
-h1{margin:0;font-size:20px;font-weight:800}
-a.btn,button.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:0;background:#1f1f1f;color:#fff;text-decoration:none;font-weight:800;cursor:pointer}
+
+/* --- HEADER: center title, left back button, right bell --- */
+header{
+  background:var(--brand);
+  padding:14px 18px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  column-gap:16px;
+  box-shadow:0 2px 6px rgba(0,0,0,.06)
+}
+header .title{
+  text-align:center;
+  font-size:20px;
+  font-weight:800;
+  margin:0;
+}
+a.btn,button.btn{
+  display:inline-block;padding:10px 14px;border-radius:10px;border:0;background:#1f1f1f;color:#fff;text-decoration:none;font-weight:800;cursor:pointer
+}
 a.btn:hover,button.btn:hover{background:#000}
 
+/* layout */
 .container{max-width:1100px;margin:20px auto;padding:0 16px}
 .panel{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:16px;margin-bottom:18px}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+/* --- GRID: center cards --- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 300px));
+  gap:16px;
+  justify-content:center;   /* จัดคอลัมน์ให้อยู่กลาง */
+}
+
+/* card */
 .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
 .card .thumb{height:180px;background:#fafafa;display:flex;align-items:center;justify-content:center}
 .card .thumb img{width:100%;height:100%;object-fit:cover}
@@ -315,6 +341,7 @@ a.btn:hover,button.btn:hover{background:#000}
 .btn2.danger{background:#ef4444;color:#fff}
 .btn2.gray{background:#e5e7eb;color:#111}
 
+/* form */
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .form-row>div{display:flex;flex-direction:column}
 input[type=text],select,textarea{padding:10px;border:1px solid #ddd;border-radius:10px}
@@ -345,20 +372,30 @@ hr{border:0;border-top:1px dashed #e5e5e5;margin:12px 0}
 /* CTA */
 .cta-bar{display:flex; align-items:center; justify-content:space-between; gap:10px}
 .cta-note{color:#666}
+
+/* responsive tweak: ฟอร์ม 1 คอลัมน์บนจอเล็ก */
+@media (max-width:640px){
+  .form-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>แลกเปลี่ยนสินค้า</h1>
-  <div style="display:flex;align-items:center;gap:10px">
+  <!-- ซ้าย: ปุ่มกลับหน้าแรก -->
+  <a class="btn" href="../index.php">กลับหน้าแรก</a>
+
+  <!-- กลาง: ไตเติลอยู่กลางจริงด้วย grid -->
+  <h1 class="title">แลกเปลี่ยนสินค้า</h1>
+
+  <!-- ขวา: กระดิ่งแจ้งเตือน (แสดงเมื่อ login) -->
+  <div>
     <?php if($userId): ?>
       <div class="ex-bell" id="exBell" title="แจ้งเตือน">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 17h5l-1.4-1.4A2 2 0 0 1 18 14.2V11a6 6 0 1 0-12 0v3.2a2 2 0 0 1-.6 1.4L4 17h5m6 0a3 3 0 1 1-6 0"/></svg>
         <span class="ex-badge" id="exCnt"></span>
       </div>
     <?php endif; ?>
-    <a class="btn" href="index.php">กลับหน้าแรก</a>
   </div>
 </header>
 

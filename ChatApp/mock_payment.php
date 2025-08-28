@@ -178,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php if(!$paid): ?>
                 <div class="muted"><?= htmlspecialchars($errMsg ?? 'เกิดข้อผิดพลาด') ?></div>
                 <div style="margin-top:12px">
-                    <a href="../topup.php" class="btn">เติมเครดิต</a>
+                    <a href="../php/topup.php" class="btn">เติมเครดิต</a>
                 </div>
             <?php else: ?>
                 <div class="muted">ยอดเงินถูกพักไว้กับตัวกลางแล้วรอผู้ซื้อกดได้รับของ</div>

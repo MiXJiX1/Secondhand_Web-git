@@ -217,7 +217,7 @@ footer{padding:20px 0;color:#aaa;text-align:center}
     <a class="tab <?= $tab==='rate'?'active':'' ?>" href="feedback.php?tab=rate">ให้คะแนน</a>
     <a class="tab <?= $tab==='report'?'active':'' ?>" href="feedback.php?tab=report">รายงานผู้ใช้</a>
   </div>
-  <a class="btn" href="index.php">กลับหน้าแรก</a>
+  <a class="btn" href="../index.php">กลับหน้าแรก</a>
 </header>
 
 <div class="container">

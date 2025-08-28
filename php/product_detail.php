@@ -217,13 +217,13 @@ $imgUrls = array_map(function($fn){
                         <a class="btn btn-login" href="login.php">เข้าสู่ระบบเพื่อแชท</a>
                     <?php elseif (!$isOwner && !$isSold): ?>
                         <a class="btn btn-chat"
-                           href="ChatApp/chat.php?request_id=<?= urlencode($requestId) ?>&product_id=<?= (int)$product['product_id'] ?>">
+                           href="../ChatApp/chat.php?request_id=<?= urlencode($requestId) ?>&product_id=<?= (int)$product['product_id'] ?>">
                            ติดต่อผู้ขาย
                         </a>
                     <?php elseif ($isSold && !$isOwner): ?>
                         <a href="#" class="btn btn-sold" onclick="alert('สินค้าชิ้นนี้ได้ถูกขายแล้ว'); return false;">สินค้าชิ้นนี้ถูกขายแล้ว</a>
                     <?php endif; ?>
-                    <a class="btn btn-back" href="index.php">กลับไปหน้าหลัก</a>
+                    <a class="btn btn-back" href="../index.php">กลับไปหน้าหลัก</a>
                 </div>
             </div>
         </div>

@@ -75,9 +75,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Redirect ตาม role
                 if ($_SESSION['role'] === 'admin') {
-                    header('Location: admin/dashboard.php');
+                    header('Location: ../admin/dashboard.php');
                 } else {
-                    header('Location: index.php');
+                    header('Location: ../index.php');
                 }
                 exit;
             } else {

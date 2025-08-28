@@ -177,7 +177,7 @@ verifyForm?.addEventListener('submit', async (e) => {
   }
 });
 
-function goBack(){ if(history.length>1) history.back(); else location.href="../index.php"; }
+function goBack(){  window.location.href = "../index.php"; }
 </script>
 </body>
 </html>

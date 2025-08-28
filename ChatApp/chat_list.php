@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-if (!isset($_SESSION['user_id'])) { header("Location: ../login.php"); exit(); }
+if (!isset($_SESSION['user_id'])) { header("Location: ../php/login.php"); exit(); }
 
 $conn = new mysqli("localhost", "mix", "mix1234", "secondhand_web");
 if ($conn->connect_error) { die("เชื่อมต่อฐานข้อมูลล้มเหลว: " . $conn->connect_error); }

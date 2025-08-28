@@ -192,9 +192,9 @@ nav { background: #333; }
   <h1>ระบบขายของมือสองภายในมหาวิทยาลัย</h1>
   <div class="login-button">
     <?php if (isset($_SESSION['username'])): ?>
-      <a href="logout.php">ออกจากระบบ</a>
+      <a href="php/logout.php">ออกจากระบบ</a>
     <?php else: ?>
-      <a href="login.php">เข้าสู่ระบบ</a>
+      <a href="php/login.php">เข้าสู่ระบบ</a>
     <?php endif; ?>
   </div>
 </header>
@@ -204,15 +204,15 @@ nav { background: #333; }
     <div class="menu-toggle" id="menuToggle">☰</div>
     <div class="nav-links" id="navLinks">
       <a href="index.php">หน้าแรก</a>
-      <a href="sell.php">ลงขายสินค้า</a>
-	  <a href="exchange.php">แลกเปลี่ยนสินค้า</a>
+      <a href="php/sell.php">ลงขายสินค้า</a>
+	  <a href="php/exchange.php">แลกเปลี่ยนสินค้า</a>
       <a href="ChatApp/chat_list.php">แชท <span id="unreadBadge" style="background:#ef4444;color:#fff;border-radius:999px;padding:2px 8px;font-weight:700;display:none"></span></a>
-      <a href="my_products.php">สินค้าของฉัน</a>
-      <a href="topup.php">เติมเครดิต</a>
-	  <a href="feedback.php">รายงานผู้ใช้/ให้คะแนน</a>
-      <a href="profile.php">โปรไฟล์</a>
+      <a href="php/my_products.php">สินค้าของฉัน</a>
+      <a href="php/topup.php">เติมเครดิต</a>
+	  <a href="php/feedback.php">รายงานผู้ใช้/ให้คะแนน</a>
+      <a href="php/profile.php">โปรไฟล์</a>
       <?php if (!isset($_SESSION['username'])): ?>
-        <a href="login.php" class="login-mobile">เข้าสู่ระบบ</a>
+        <a href="php/login.php" class="login-mobile">เข้าสู่ระบบ</a>
       <?php endif; ?>
     </div>
   </div>
@@ -269,7 +269,7 @@ nav { background: #333; }
           <div class="info">
             <h3><?= htmlspecialchars($row['product_name']) ?></h3>
             <p>ราคา: <?= number_format((float)$row['product_price'], 2) ?> บาท</p>
-            <a href="product_detail.php?id=<?= (int)$row['product_id'] ?>" class="view-button">ดูรายละเอียด</a>
+            <a href="php/product_detail.php?id=<?= (int)$row['product_id'] ?>" class="view-button">ดูรายละเอียด</a>
           </div>
         </div>
         <?php
