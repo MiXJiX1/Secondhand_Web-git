@@ -10,10 +10,10 @@ if (!isset($_SESSION['user_id'])) {
   exit;
 }
 
-$DB_HOST='sczfile.online';
-$DB_USER='mix';
-$DB_PASS='mix1234';
-$DB_NAME='secondhand_web';
+$DB_HOST='.';
+$DB_USER='';
+$DB_PASS='';
+$DB_NAME='';
 
 $pdo = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4",$DB_USER,$DB_PASS,[
   PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION

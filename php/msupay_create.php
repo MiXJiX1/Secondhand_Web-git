@@ -11,7 +11,7 @@ $userId    = (int)$_SESSION['user_id'];
 
 if ($requestId==='' || $productId<=0) { echo json_encode(['ok'=>false,'error'=>'bad params']); exit; }
 
-$pdo = new PDO("mysql:host=sczfile.online;dbname=secondhand_web;charset=utf8mb4","mix","mix1234",
+$pdo = new PDO("mysql:host=;dbname=;charset=utf8mb4","","",
                [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
 
 // ดึงราคาสินค้า

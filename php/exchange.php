@@ -7,10 +7,10 @@ error_reporting(E_ALL);
 session_start();
 
 /* ===== DB ===== */
-$DB_HOST = 'sczfile.online';
-$DB_USER = 'mix';
-$DB_PASS = 'mix1234';
-$DB_NAME = 'secondhand_web';
+$DB_HOST = '';
+$DB_USER = '';
+$DB_PASS = '';
+$DB_NAME = '';
 
 try {
   $pdo = new PDO(
