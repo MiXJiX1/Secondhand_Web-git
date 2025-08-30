@@ -1,9 +1,9 @@
 <?php
 session_start();
-$servername = "sczfile.online";
-$username = "mix";
-$password = "mix1234";
-$dbname = "secondhand_web";
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {

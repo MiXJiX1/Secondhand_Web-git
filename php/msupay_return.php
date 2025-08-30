@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO("mysql:host=sczfile.online;dbname=secondhand_web;charset=utf8mb4","mix","mix1234",
+$pdo = new PDO("mysql:host=;dbname=;charset=utf8mb4","","",
                [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
 
 $MERCHANT_ID = 'YOUR_MERCHANT_ID';

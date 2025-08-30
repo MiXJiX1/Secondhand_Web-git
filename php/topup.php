@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['user_id'])) { header("Location: login.php"); exit(); }
 
-$conn = new mysqli("sczfile.online","mix","mix1234","secondhand_web");
+$conn = new mysqli("","","","");
 if ($conn->connect_error) die("DB error: ".$conn->connect_error);
 $conn->set_charset("utf8mb4");
 

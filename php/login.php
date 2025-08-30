@@ -11,10 +11,10 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 session_start();
 
 /* ====== ตั้งค่าเชื่อมต่อฐานข้อมูล ====== */
-$servername = "sczfile.online";
-$username   = "mix";
-$password   = "mix1234";
-$dbname     = "secondhand_web";
+$servername = "";
+$username   = "";
+$password   = "";
+$dbname     = "";
 
 /* ====== เชื่อมต่อฐานข้อมูล ====== */
 try {

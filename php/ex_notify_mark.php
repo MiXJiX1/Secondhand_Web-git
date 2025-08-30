@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 if (!isset($_SESSION['user_id'])) { echo json_encode(['ok'=>false,'items'=>[]]); exit; }
 
-$pdo = new PDO("mysql:host=sczfile.online;dbname=secondhand_web;charset=utf8mb4","mix","mix1234",[
+$pdo = new PDO("mysql:host=;dbname=;charset=utf8mb4","","",[
   PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION
 ]);
 $st=$pdo->prepare("
