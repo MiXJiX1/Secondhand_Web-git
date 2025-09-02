@@ -7,7 +7,7 @@ if (!$user_id) {
     exit;
 }
 
-$pdo = new PDO("mysql:host=sczfile.online;dbname=secondhand_web;charset=utf8", "mix", "mix1234");
+$pdo = new PDO("mysql:host=.;dbname=;charset=utf8", "", "");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // โหลดข้อมูลผู้ใช้

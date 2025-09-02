@@ -3,10 +3,10 @@ session_start();
 if (!isset($_SESSION['user_id'])) { header("Location: login.php"); exit(); }
 
 /* --- DB --- */
-$servername = "sczfile.online";
-$username   = "mix";
-$password   = "mix1234";
-$dbname     = "secondhand_web";
+$servername = "";
+$username   = "";
+$password   = "";
+$dbname     = "";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) { die("เชื่อมต่อฐานข้อมูลล้มเหลว: " . $conn->connect_error); }
